@@ -18,7 +18,7 @@
 <v t="leo.20151213173830.1" a="E"><vh>假如要在近端檢視, 使用下列按鈕</vh>
 <v t="leo.20151213085727.1"><vh>@button pelican-blog</vh></v>
 </v>
-<v t="amd.20151215180106.1"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1" a="E"><vh>@clean index.html</vh>
 <v t="amd.20161004083800.1" a="E"><vh>html</vh>
 <v t="amd.20161004083800.2"><vh>head</vh></v>
@@ -300,12 +300,12 @@ print("hello")
 
 						
 </t>
-<t tx="amd.20161004095719.2"># 2016Fall 計算機程式課程
+<t tx="amd.20161004095719.2"># 2016Fall 計算機程式課程s40171225
 
 ### 虎科大機械設計工程系
 
 &lt;small&gt;
-Created by [KMOLab](http://chiamingyen.github.io/kmolab/blog/)
+Created by [s40171225](http://chiamingyen.github.io/kmolab/blog/)
 &lt;/small&gt;
 
 [甲班計算機程式課程網誌](blog/index.html)
