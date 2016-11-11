@@ -31,7 +31,7 @@
 <v t="yen.20161016023122.1" a="E"><vh>快捷鍵</vh>
 <v t="yen.20161016023122.2"><vh>投影片快捷鍵</vh></v>
 </v>
-<v t="amd.20161004104820.1"><vh>三大主題教學</vh>
+<v t="amd.20161004104820.1" a="E"><vh>三大主題教學</vh>
 <v t="amd.20161004104641.1" a="E"><vh>主題教學</vh>
 <v t="amd.20161004104641.2"><vh>計算機程式在教什麼?</vh></v>
 </v>
@@ -308,6 +308,8 @@ print("hello")
 &lt;small&gt;
 Created by [s40171225](https://s40171225.github.io/2016fallcp_hw/blog/)
 &lt;/small&gt;
+
+[blog更改影片40171225](https://vimeo.com/190213090)
 
 [甲班計算機程式課程網誌](blog/index.html)
 
