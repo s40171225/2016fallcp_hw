@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall CPA 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2016-11-18T12:00:00+08:00</updated><entry><title>W10 Brython 繪圖範例</title><link href="./w10-brython-hui-tu-fan-li.html" rel="alternate"></link><published>2016-11-18T12:00:00+08:00</published><updated>2016-11-18T12:00:00+08:00</updated><author><name>40171225</name></author><id>tag:,2016-11-18:./w10-brython-hui-tu-fan-li.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall CPA 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2016-12-02T12:00:00+08:00</updated><entry><title>W11 Brython 繪圖</title><link href="./w11-brython-hui-tu.html" rel="alternate"></link><published>2016-12-02T12:00:00+08:00</published><updated>2016-12-02T12:00:00+08:00</updated><author><name>40171225</name></author><id>tag:,2016-12-02:./w11-brython-hui-tu.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫方格線 --&gt;
+
+&lt;canvas id="japanflag3" width="600" height="300"&gt;&lt;/canvas&gt;
+
+&lt;div id="container3"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+import math
+import re
+# 準備繪圖畫布
+canvas = doc["japanflag3"]
+container = doc["container3"]
+ctx = canvas.getContext("2d")
+# 以下可以利用 ctx 物件進行畫圖
+
+# 水平線
+for i in range(5):
+    ctx.beginPath()
+# 設定線的寬度為 1 個單位
+    if i == 0:
+        ctx.lineWidth = 7
+    else:
+        ctx.lineWidth = 1
+    ctx.moveTo(99, 100+i*30)
+    ctx.lineTo(201, 100+i*30)
+    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+    ctx.strokeStyle = "blue"
+    ctx.stroke()
+    ctx.closePath()
+
+# 垂直線
+for i in range(6):
+    ctx.beginPath()
+# 設定線的寬度為 1 個單位
+    ctx.lineWidth = 1
+    ctx.moveTo(100+i*20, 100)
+    ctx.lineTo(100+i*20, 220)
+    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+    ctx.strokeStyle = "blue"
+    ctx.stroke()
+    ctx.closePath()
+'''
+# 以下將 canvas 畫布內容轉為 img tag, 並且顯示在 container 物件
+img = canvas.toDataURL("image/png")
+# 利用 re.sub, 將原本要直接開圖檔的 data:image 標頭, 改為 data:application/octet-stream, 可直接下載存檔
+# 使用 re 模組之前必須先 import re
+img = re.sub("^data:image\/[^;]", "data:application/octet-stream", img)
+# 宣告 anchor markup attribute download, 可以指定下載儲存檔名
+container &lt;= html.A("save image", href=img, download="guitar_chord.png")
+'''
+&lt;/script&gt;</summary><category term="使用導引"></category></entry><entry><title>W10 Brython 繪圖範例</title><link href="./w10-brython-hui-tu-fan-li.html" rel="alternate"></link><published>2016-11-18T12:00:00+08:00</published><updated>2016-11-18T12:00:00+08:00</updated><author><name>40171225</name></author><id>tag:,2016-11-18:./w10-brython-hui-tu-fan-li.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
 
