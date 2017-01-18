@@ -315,65 +315,40 @@ init_mathjax();
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>產生亂數心得:
-隨機亂數 (可額外加上print印出結果)
-隨機挑選0~49的數字</p>
-<p>num = random.randint(1, 49)
- 數字在1-49之間</p>
+                <p>隨機亂數 
+隨機選出0~40的數字</p>
+<p>num = random.randint(1, 40)
+ 意思數字在1-40之間</p>
 <p>for i in range(6)
- 我要產生出6個號碼</p>
+ 這句產生出6個號碼，用一個字母i做代號，可之後印出i</p>
 <p>print_location &lt;= "恭喜中獎!" + html.BR()</p>
-<p>產生後我要印出恭喜中獎+換行</p>
-<p>心得: 學到利用亂數模組產生 取得使用者所猜整數，根據使用者與標準答案比較大小，並且回應提示字串</p>
+<p>產生後印出恭喜中獎+html.BR()代表換行</p>
+<p>心得: 一開始先亂數選出，使用者輸入數字，之後根據使用者所輸入的數字做出相對印的字串提示</p>
 <p>單線旋轉動畫心得:</p>
+<p>取畫布的寬與高度width = canvas.width，height = canvas.height</p>
+<p>先打出畫圓函式，利用x1,y1,x2,y2當作位置一二，也就是座標點的代號</p>		    
 <p>猜數字心得:
-1.print會列印在主控台
-2.第二種列印資料方法利用alert利用broswer模組import
-3.真正實用第三種<div id="con"></div>用這個id跟con1 = document["con"]的document做綁定
-  綁定好再用特殊語法 con1&lt;=document["con"]</p>
-<p>需要跳行要用 + html.BR()來跳行 </p>
-<p>利用try ， except來執行
-如果輸入正確會跑進try來執行
-出錯的話會跑到except</p>
-<p>再用import random
-用import.randint(某數字，某數字)======&gt;多少到多少之間
-再用使用者猜的數字 呼叫int才能轉成整數 如果輸入不適整數可以加入try，except
-再設一個猜測次數
-接著讓他一猜使用while迴圈讓他一直猜</p>
-<p>心得:這次猜數字要用到特殊語法con1&lt;=document["con"]
-再用去http://wordpress-2015course.rhcloud.com/?p=4319
-使用猜數字得程式</p>
-<p>學習到利用 random 模組產生特定範圍內的整數</p>
-<p>猜對印出比正確數字大或小的提示, 直到使用者猜對或因累計至預設猜謎次數後跳出while迴圈</p>
-<p>用程式來寫遊戲那麼有趣, 讓我對這塊領域又更感興趣</p>
-<p>繪圖心得:
-canvas id="G Major" width="600" height="250"</p>
-<p>畫布名稱為G Major，寬600單位，高250單位
-script type="text/python3" </p>
+有點像c++的方式，先讓電腦亂數做1到100選擇其一random.randint(1, 100)，之後再依使用者輸入數字來做出相對印的字串</p>
+<p>str()+猜測次數</p>
+<p>猜數字得程式</p>
+<p>讓我學習到亂數產生指定區域內的整數，跑出對話框，一使用者數字下去做迴圈判斷</p>
+<p>再加上統計出猜測的次數</p>
+<p>聖誕快樂:
+<p>def compa(e):</p>
+<p>your_input = input("請輸入一個整數!")</p>
+<p>如何判斷所輸入的整數比 10 大,用if else except對輸入數跟10來做比較，並跑出結果字串</p>
+<p>w14
+<p>input輸入數字the_input= input("請輸入")</p>
+<p>document['ch01'].bind('click',get_input)</p>
+<p>"ch01">取輸入後, 列印出來</p>
+<p>畫圖心得
+<p>先給畫布，打上名稱，設定寬度高度width="" height=""</p>
 <p>用python3來繪圖</p>
-<p>canvas = doc["G Major"]</p>
-<p>畫布 = G Major</p>
 <p>ctx = canvas.getContext("2d")</p>
-<p>畫2d圖形</p>
-<p>for i in range(N):</p>
-<p>for迴圈跑n次</p>
-<p>ctx.lineWidth = ??</p>
-<p>線寬 = ??</p>
-<p>ctx.strokeStyle = "blue"</p>
-<p>線的顏色是blue</p>
-<p>ctx.closePath()</p>
-<p>結束繪圖
-ctx.fillStyle = 'black'</p>
-<p>字體顏色black</p>
-<p>ctx.strokeStyle = "black"</p>
-<p>字體輪廓black</p>
-<p>ctx.font = "25px Arial"</p>
-<p>字型格式 = 大小25px 並使用Arial的字型</p>
-<p>ctx.fillText("G Major", 110, 25)</p>
-<p>套用在G Major，寬110單位，高25單位</p>
-<p>心得:先學會要如何建立你要的大小畫布，先設一個點座標再用move移動到你要的點連成一線，還要會建立線寬顏色使用ctx.strokestyle = "(顏色)"
-        ctx.lineWidth = (數字寬度)的指令</p>
-            </div>
+<p>畫2d的圖</p>
+<p>for i in range迴圈，再給線的顏色ctx.strokeStyle = ""，寬度ctx.lineWidth = ??</p>
+<p>ctx.closePath()結束，設定字體顏色輪廓格式</p>
+             </div>
             <!-- /.entry-content -->
         </article>
     </section>
